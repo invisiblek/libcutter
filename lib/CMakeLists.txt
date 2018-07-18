@@ -39,6 +39,7 @@ endif(HAS_SDL)
 
 add_library (cutter SHARED ${cutter_files})
 if(HAS_SDL)
+    include_directories(/usr/include/SDL)
     target_link_libraries (cutter SDL SDL_gfx)
 endif(HAS_SDL)
 
